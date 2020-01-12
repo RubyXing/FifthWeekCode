@@ -30,12 +30,13 @@ public class GirlFriend implements Runnable {
     @Override
     public void run() {
         try {
-            for (int i=0;i<10;i++){
-            synchronized (CreditCard.class){
-                gcard.setCmoney(gcard.getCmoney()-80);
-                System.out.println(toString());
-                sleep(200);
-            }}
+            for (int i = 0; i < 10; i++) {
+                synchronized (CreditCard.class) {
+                    gcard.setCmoney(gcard.getCmoney() - 80);
+                    System.out.println(toString());
+                    sleep(200);
+                }
+            }
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
