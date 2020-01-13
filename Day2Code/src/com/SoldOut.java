@@ -3,6 +3,7 @@ package com;/*
  *
  */
 
+
 public class SoldOut implements Runnable {
     private Ticketer ticket;
     private Thread str;
@@ -26,19 +27,19 @@ public class SoldOut implements Runnable {
 
     @Override
     public void run() {
-
-        try {
-            while (ticket.getTicket() > 0) {
+        while (ticket.getTicket() > 0) {
+            synchronized (ticket) {
                 int num = (int) (Math.random() * 3) + 1;
-                ticket.setTicket(num);
-                System.out.println(Thread.currentThread().getName() + "卖了:" + num + "---剩余：" + toString());
-                Thread.sleep(200);
+                if (num <= ticket.getTicket()) {
+                    ticket.setTicket(num);
+                }
             }
-
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
-
     }
 
     public void start() {
