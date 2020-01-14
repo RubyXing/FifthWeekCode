@@ -1,7 +1,6 @@
 package com.slovell.fight.test;
 
-import java.awt.Graphics;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
@@ -10,6 +9,7 @@ import javax.swing.JFrame;
 
 import com.slovell.fight.model.Hero;
 import com.slovell.fight.tools.GameValue;
+import com.sun.xml.internal.bind.v2.TODO;
 
 public class PlayPNG extends JFrame {
     /**
@@ -17,10 +17,14 @@ public class PlayPNG extends JFrame {
      */
     private static final long serialVersionUID = -3499834462590506137L;
 
+    //双缓冲方法解决闪烁问题
+    Image ImageBuffer = null;
+    Graphics img;
     /**
      * 角色图片素材-右站
      */
     public static Image[] stand_right = Hero.jump_right;
+
 
     int index = 0;
 
@@ -74,12 +78,22 @@ public class PlayPNG extends JFrame {
     @Override
     public void paint(Graphics g) {
         // TODO Auto-generated method stub
-        super.paint(g);
-        g.drawImage(stand_right[index], 200, 200, this);
+//        super.paint(g);
+//        g.drawImage(stand_right[index], 200, 200, this);
+
+        if (ImageBuffer == null) {
+            ImageBuffer = createImage(this.getWidth(), this.getHeight());
+        }
+        img = ImageBuffer.getGraphics();
+        super.paint(img);
+
+        img.drawImage(Toolkit.getDefaultToolkit().getImage("img/role/stand-right/stand02.gif"), 100, 100, this);
+        img.dispose();
+        g.drawImage(ImageBuffer, 0, 0, this);
     }
 
     public static void main(String[] args) {
-        File file = new File("img/role/stand-left/stand01.png");
+
         new PlayPNG();
     }
 }

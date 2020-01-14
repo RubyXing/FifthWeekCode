@@ -1,7 +1,7 @@
 package com.slovell.fight.tools;
 
 /**
- * ��Ϸ��ʱ��
+ * 游戏定时器
  */
 public class GameTimer implements Runnable {
 

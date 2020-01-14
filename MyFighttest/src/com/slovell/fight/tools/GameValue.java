@@ -5,16 +5,16 @@ import java.awt.Image;
 import java.awt.Toolkit;
 
 /***
- * ��ű���*/
+ * ????*/
 public class GameValue {
     /**
-     * ��ȡ��Ļ����
+     * ??????
      */
     public static int WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width,
             HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height;
 
     /**
-     * ������
+     * ????
      */
     public static int Width = 900, Hight = 550;
 
@@ -26,17 +26,17 @@ public class GameValue {
     };
 
     /**
-     * ��ʾ����
+     * ????
      */
-    public static Font display_font = new Font("����", Font.PLAIN, 20);
+    public static Font display_font = new Font("??", Font.PLAIN, 20);
 
     /**
-     * ������������
+     * ??????
      */
     public static int Monster_num = 2;
 
     /**
-     * ����ͼƬ�ز�-1��
+     * ??????-1?
      */
     public static Image[] monster1_left = {
             Toolkit.getDefaultToolkit().getImage("img/monster/1/left/0.png"),
@@ -52,7 +52,7 @@ public class GameValue {
     };
 
     /**
-     * ����ͼƬ�ز�-1��
+     * ??????-1?
      */
     public static Image[] monster1_right = {
             Toolkit.getDefaultToolkit().getImage("img/monster/1/right/0.png"),
@@ -68,7 +68,7 @@ public class GameValue {
     };
 
     /**
-     * ����ͼƬ�ز�-2��
+     * ??????-2?
      */
     public static Image[] monster2_left = {
             Toolkit.getDefaultToolkit().getImage("img/monster/2/left/0.png"),
@@ -79,7 +79,7 @@ public class GameValue {
     };
 
     /**
-     * ����ͼƬ�ز�-2��
+     * ??????-2?
      */
     public static Image[] monster2_right = {
             Toolkit.getDefaultToolkit().getImage("img/monster/2/right/0.png"),

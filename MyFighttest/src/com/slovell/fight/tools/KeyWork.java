@@ -18,19 +18,19 @@ public class KeyWork implements KeyListener {
         switch (key) {
 
             /**
-             * ����esc���˳�*/
+             * 按下esc键退出*/
             case KeyEvent.VK_ESCAPE:
                 FightGameLaunch.getMainFrame().isclose();
                 break;
 
             /**
-             * ���¿ո���*/
+             * 按下空格跳*/
             case KeyEvent.VK_SPACE:
                 Hero.jump = true;
                 break;
 
             /**
-             * ��*/
+             * 左*/
             case KeyEvent.VK_LEFT:
             case KeyEvent.VK_A:
                 pressA = true;
@@ -40,7 +40,7 @@ public class KeyWork implements KeyListener {
                 break;
 
             /**
-             * ��*/
+             * 右*/
             case KeyEvent.VK_RIGHT:
             case KeyEvent.VK_D:
                 pressD = true;
@@ -50,14 +50,14 @@ public class KeyWork implements KeyListener {
                 break;
 
             /**
-             * ��סS������*/
+             * 按住S或者下*/
             case KeyEvent.VK_DOWN:
             case KeyEvent.VK_S:
                 pressDown = true;
                 break;
 
             /**
-             * �����ͷ�һ����*/
+             * 可以释放一技能*/
             case KeyEvent.VK_K:
                 if (Hero.MP_NOW >= Hero.skill0_mp && pressDown) {
                     Hero.skill0_attack = true;
@@ -65,13 +65,13 @@ public class KeyWork implements KeyListener {
                 break;
 
             /**
-             * ����*/
+             * 攻击*/
             case KeyEvent.VK_J:
                 Hero.attack = true;
                 break;
 
             /**
-             * ����*/
+             * 测试*/
             case KeyEvent.VK_0:
                 Hero.MP_NOW += 100;
                 break;
@@ -85,12 +85,12 @@ public class KeyWork implements KeyListener {
         switch (key) {
 
             /**
-             * �ͷſո�*/
+             * 释放空格*/
             case KeyEvent.VK_SPACE:
                 break;
 
             /**
-             * ��*/
+             * 左*/
             case KeyEvent.VK_LEFT:
             case KeyEvent.VK_A:
                 pressA = false;
@@ -100,7 +100,7 @@ public class KeyWork implements KeyListener {
                 break;
 
             /**
-             * ��*/
+             * 右*/
             case KeyEvent.VK_RIGHT:
             case KeyEvent.VK_D:
                 pressD = false;
@@ -110,7 +110,7 @@ public class KeyWork implements KeyListener {
                 break;
 
             /**
-             * �ɿ�S������*/
+             * 松开S或者下*/
             case KeyEvent.VK_DOWN:
             case KeyEvent.VK_S:
                 pressDown = false;
