@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/MyFighttest/src/com/slovell/fight/main/FightGameLaunch.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/MyFighttest/src/com/slovell/fight/model/Hero.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/MyFighttest/src/com/slovell/fight/model/Monster.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/MyFighttest/src/com/slovell/fight/panel/MainFrame.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/MyFighttest/src/com/slovell/fight/test/PlayPNG.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
