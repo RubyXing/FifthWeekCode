@@ -261,7 +261,7 @@ public class Hero {
 
     public static void attacked(int atk) {
         ishurted = true;
-        HP_NOW -= atk;
+        HP_NOW += atk;
 
         if (HP_NOW < 0) {
             HP_NOW = 0;
